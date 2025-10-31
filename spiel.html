@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ReaLife – Spiel</title>
+  <link rel="stylesheet" href="spiel.css" />
+</head>
+<body>
+  <header>
+    <button onclick="window.location.href='index.html'" class="back-btn">⬅️ Menü</button>
+    <h2>ReaLife</h2>
+  </header>
+
+  <main>
+    <section class="stats">
+      <div>💰 Geld: <span id="money">1000</span> €</div>
+      <div>🧍 Alter: <span id="age">18</span></div>
+      <div>😊 Glück: <span id="happiness">70</span>%</div>
+      <div>❤️ Gesundheit: <span id="health">85</span>%</div>
+    </section>
+
+    <section class="actions">
+      <button id="workBtn">Arbeiten gehen</button>
+      <button id="buyBtn">Etwas kaufen (-50€)</button>
+      <button id="ageBtn">Ein Jahr älter werden</button>
+    </section>
+
+    <section class="events">
+      <h3>Ereignisse</h3>
+      <div id="eventLog"></div>
+    </section>
+  </main>
+
+  <script src="spiel.js"></script>
+</body>
+</html>
