@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ReaLife – Einstellungen</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/settings.css" />
+</head>
+<body>
+  <header>
+    <button onclick="window.location.href='index.html'" class="icon-btn">⬅️ Zurück</button>
+    <h2>Einstellungen</h2>
+  </header>
+
+  <main>
+    <form id="settingsForm" class="settings-form">
+      <h3>Allgemein</h3>
+
+      <label for="volume">🔊 Lautstärke</label>
+      <input type="range" id="volume" min="0" max="100" value="70" />
+
+      <label for="language">🌍 Sprache</label>
+      <select id="language">
+        <option value="de">Deutsch</option>
+        <option value="en">Englisch</option>
+        <option value="fr">Französisch</option>
+      </select>
+
+      <label for="theme">🎨 Design</label>
+      <select id="theme">
+        <option value="dark">Dunkel</option>
+        <option value="light">Hell</option>
+      </select>
+
+      <label>
+        <input type="checkbox" id="music" checked />
+        🎵 Hintergrundmusik aktivieren
+      </label>
+
+      <label>
+        <input type="checkbox" id="notifications" />
+        🔔 Benachrichtigungen aktivieren
+      </label>
+
+      <button type="submit">Speichern</button>
+    </form>
+  </main>
+
+  <script>
+    const form = document.getElementById("settingsForm");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const settings = {
+        volume: document.getElementById("volume").value,
+        language: document.getElementById("language").value,
+        theme: document.getElementById("theme").value,
+        music: document.getElementById("music").checked,
+        notifications: document.getElementById("notifications").checked,
+      };
+
+      localStorage.setItem("reaLifeSettings", JSON.stringify(settings));
+      alert("Einstellungen gespeichert!");
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>
