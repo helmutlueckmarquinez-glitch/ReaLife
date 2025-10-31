@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ReaLife – Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <button onclick="window.location.href='index.html'" class="icon-btn">⬅️ Zurück</button>
+    <h2>Anmeldung</h2>
+  </header>
+
+  <main>
+    <form id="loginForm" class="register-form">
+      <h3>Willkommen zurück!</h3>
+      <input type="text" id="username" placeholder="Benutzername oder E-Mail" required />
+      <input type="password" id="password" placeholder="Passwort" required />
+      <button type="submit">Einloggen</button>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const username = document.getElementById("username").value;
+      alert(`Willkommen zurück, ${username || "Spieler"}!`);
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>
