@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ReaLife – Registrierung</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <button onclick="window.location.href='index.html'" class="icon-btn">⬅️ Zurück</button>
+    <h2>Registrierung</h2>
+  </header>
+
+  <main>
+    <form id="registerForm" class="register-form">
+      <h3>Erstelle dein Konto</h3>
+      <input type="text" id="username" placeholder="Benutzername" required />
+      <input type="email" id="email" placeholder="E-Mail" required />
+      <input type="password" id="password" placeholder="Passwort" required />
+      <button type="submit">Registrieren</button>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Registrierung erfolgreich! (Platzhalter)");
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>
