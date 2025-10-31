@@ -116,3 +116,48 @@ header {
 .login-form button:hover {
   background-color: #1e88e5;
 }
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 320px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.settings-form h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.settings-form label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+.settings-form select,
+.settings-form input[type="range"],
+.settings-form input[type="checkbox"] {
+  margin-left: 10px;
+}
+
+.settings-form button {
+  margin-top: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.settings-form button:hover {
+  background-color: #45a049;
+}
