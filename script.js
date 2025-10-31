@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const registerBtn = document.getElementById("registerBtn");
 
   startBtn.addEventListener("click", () => {
-    alert("Spiel startet...");
-  });
+    window.location.href = "spiel.html";
+});
 
   realLifeBtn.addEventListener("click", () => {
     alert("Echtes Leben wird geladen...");
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   settingsBtn.addEventListener("click", () => {
-    alert("Einstellungen öffnen...");
+    window.location.href = "settings.html";
   });
 
   loginBtn.addEventListener("click", () => {
